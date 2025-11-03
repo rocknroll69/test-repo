@@ -1,0 +1,53 @@
+soal 1
+https://colab.research.google.com/drive/1FIKCZcRSTM5CapHtdcmuM8TZDj0MW0x_?usp=sharing
+
+soal 2
+https://colab.research.google.com/drive/1gfh6DiTGc2lezKcPt8RPS_BXyOIPMube?usp=sharing
+
+soal 3
+Tabel tersebut merupakan output dari regresi linier berganda yang dihasilkan oleh fungsi OLS dari pustaka statsmodels pada Python. Berikut adalah poin-poin penting yang perlu diperhatikan:
+1. Nilai R-squared dan Adjusted R-squared
+-R-squared: 0.954
+
+Artinya model ini mampu menjelaskan 95.4% variasi dari variabel dependen (price) berdasarkan variabel-variabel independen yang digunakan. Ini menunjukkan bahwa model memiliki daya prediksi yang sangat kuat.
+
+-Adjusted R-squared: 0.953
+
+Nilai ini menyesuaikan R-squared dengan memperhitungkan jumlah variabel independen dalam model. Nilai yang masih tinggi menunjukkan bahwa penambahan variabel tidak menyebabkan overfitting.
+
+2. F-statistic dan Prob(F-statistic)
+-F-statistic: 731.3 dan p-value: 1.46e-274
+
+Ini adalah uji signifikan model secara keseluruhan. Nilai F yang sangat besar dan p-value yang sangat kecil (jauh di bawah 0.05) menunjukkan bahwa model regresi secara keseluruhan signifikan, artinya ada setidaknya satu variabel independen yang secara statistik berpengaruh terhadap variabel dependen.
+
+3. Koefisien (coef), Signifikansi (P>|t|), dan Confidence Interval
+Setiap baris dalam tabel menunjukkan sebuah variabel independen.
+
+Kolom coef menunjukkan besar pengaruh variabel tersebut terhadap harga (price). Misalnya, garagepl memiliki koefisien 4652.5, artinya setiap penambahan satu tempat parkir akan meningkatkan harga rumah sebesar sekitar 4652.5 unit.
+
+Kolom P>|t| menunjukkan apakah pengaruh tersebut signifikan secara statistik:
+
+Nilai p < 0.05 → signifikan → variabel ini berkontribusi secara nyata pada model.
+
+Nilai p ≥ 0.05 → tidak signifikan → kontribusi variabel bisa dipertanyakan atau diabaikan.
+
+Contoh signifikan: bathrms, driveway, garagepl, prefarea, dll.
+
+Contoh tidak signifikan: recroom, stories_one, stories_two.
+
+Confidence Interval [95.0% Conf. Int.]: Interval ini menunjukkan rentang di mana nilai koefisien sebenarnya kemungkinan besar berada. Jika interval ini tidak melewati nol, berarti koefisien signifikan.
+
+4. Statistik Diagnostik Lainnya
+Omnibus, Jarque-Bera (JB), Skew, Kurtosis
+
+Ini adalah statistik untuk mengevaluasi asumsi normalitas residual. Nilai Prob(JB) yang sangat kecil (1.92e-08) menunjukkan bahwa residual mungkin tidak berdistribusi normal, yang bisa mempengaruhi validitas inference statistik.
+
+-Durbin-Watson: 1.964
+
+Ini adalah uji autokorelasi residual. Nilai mendekati 2 berarti tidak ada autokorelasi, sehingga asumsi regresi terpenuhi.
+
+5. Interpretasi Praktis
+Model menunjukkan bahwa harga rumah dipengaruhi secara signifikan oleh beberapa faktor seperti jumlah kamar mandi (bathrms), ketersediaan garasi (garagepl), preferensi lokasi (prefarea), dan lain-lain.
+
+Beberapa variabel, meskipun dimasukkan dalam model, ternyata tidak memberikan kontribusi yang signifikan dan bisa dipertimbangkan untuk dihapus agar model lebih sederhana dan efisien.
+
